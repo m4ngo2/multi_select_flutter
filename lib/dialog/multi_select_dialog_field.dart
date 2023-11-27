@@ -70,6 +70,9 @@ class MultiSelectDialogField<V> extends FormField<List<V>> {
   /// Set the background color of the dialog.
   final Color? backgroundColor;
 
+  /// Set the surfaceTintColor of the dialog.
+  final Color? surfaceTintColor;
+
   /// Color of the chip body or checkbox border while not selected.
   final Color? unselectedColor;
 
@@ -126,6 +129,7 @@ class MultiSelectDialogField<V> extends FormField<List<V>> {
     this.dialogWidth,
     this.colorator,
     this.backgroundColor,
+    this.surfaceTintColor,
     this.unselectedColor,
     this.searchIcon,
     this.closeSearchIcon,
@@ -170,6 +174,7 @@ class MultiSelectDialogField<V> extends FormField<List<V>> {
                 dialogWidth: dialogWidth,
                 colorator: colorator,
                 backgroundColor: backgroundColor,
+                surfaceTintColor: surfaceTintColor,
                 unselectedColor: unselectedColor,
                 searchIcon: searchIcon,
                 closeSearchIcon: closeSearchIcon,
@@ -207,6 +212,7 @@ class _MultiSelectDialogFieldView<V> extends StatefulWidget {
   final String? searchHint;
   final Color Function(V)? colorator;
   final Color? backgroundColor;
+  final Color? surfaceTintColor;
   final Color? unselectedColor;
   final Icon? searchIcon;
   final Icon? closeSearchIcon;
@@ -240,6 +246,7 @@ class _MultiSelectDialogFieldView<V> extends StatefulWidget {
     this.dialogWidth,
     this.colorator,
     this.backgroundColor,
+    this.surfaceTintColor,
     this.unselectedColor,
     this.searchIcon,
     this.closeSearchIcon,
@@ -275,6 +282,7 @@ class _MultiSelectDialogFieldView<V> extends StatefulWidget {
         searchHint = field.searchHint,
         colorator = field.colorator,
         backgroundColor = field.backgroundColor,
+        surfaceTintColor = field.surfaceTintColor,
         unselectedColor = field.unselectedColor,
         searchIcon = field.searchIcon,
         closeSearchIcon = field.closeSearchIcon,
@@ -390,6 +398,7 @@ class __MultiSelectDialogFieldViewState<V>
           closeSearchIcon: widget.closeSearchIcon,
           unselectedColor: widget.unselectedColor,
           backgroundColor: widget.backgroundColor,
+          surfaceTintColor: widget.surfaceTintColor,
           colorator: widget.colorator,
           searchHint: widget.searchHint,
           selectedColor: widget.selectedColor,
