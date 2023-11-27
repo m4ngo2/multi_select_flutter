@@ -51,6 +51,9 @@ class MultiSelectDialog<T> extends StatefulWidget with MultiSelectActions<T> {
   /// The background color of the dialog.
   final Color? backgroundColor;
 
+  /// The surfaceTintColor of the dialog.
+  final Color? surfaceTintColor;
+
   /// The color of the chip body or checkbox border while not selected.
   final Color? unselectedColor;
 
@@ -94,6 +97,7 @@ class MultiSelectDialog<T> extends StatefulWidget with MultiSelectActions<T> {
     this.width,
     this.colorator,
     this.backgroundColor,
+    this.surfaceTintColor,
     this.unselectedColor,
     this.searchIcon,
     this.closeSearchIcon,
@@ -218,6 +222,7 @@ class _MultiSelectDialogState<T> extends State<MultiSelectDialog<T>> {
   Widget build(BuildContext context) {
     return AlertDialog(
       backgroundColor: widget.backgroundColor,
+      surfaceTintColor: widget.surfaceTintColor,
       title: widget.searchable == false
           ? widget.title ?? const Text("Select")
           : Row(
